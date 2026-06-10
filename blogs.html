@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blogs | Pratik Modi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,600;1,700&family=Playfair+Display:wght@400;500&family=DM+Mono:wght@300;400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Progress Bar -->
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- Custom Cursor -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- Nav -->
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">Pratik Modi</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="blogs.html">Blogs</a></li>
+    <li><a href="resume.html">Resume</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile Drawer -->
+<div class="mobile-drawer" id="mobileDrawer">
+  <a href="index.html" class="drawer-link">Home</a>
+  <a href="about.html" class="drawer-link">About</a>
+  <a href="projects.html" class="drawer-link">Projects</a>
+  <a href="blogs.html" class="drawer-link">Blogs</a>
+  <a href="resume.html" class="drawer-link">Resume</a>
+  <a href="contact.html" class="drawer-link">Contact</a>
+</div>
+
+<!-- ── BLOGS SECTION ── -->
+<section id="work" style="padding-top: 140px;">
+  <div class="work-header">
+    <div>
+      <div class="section-label reveal">Articles & Insights</div>
+      <h2 class="work-title reveal reveal-delay-1">Blogs</h2>
+    </div>
+    <div class="work-count reveal">03 Articles</div>
+  </div>
+
+  <div class="work-grid">
+    <div class="work-card reveal">
+      <div class="wc-body">
+        <span class="wc-num">01</span>
+        <h3 class="wc-title">Query Optimization in PostgreSQL: Best Practices</h3>
+        <p class="wc-desc" style="margin-bottom: 24px;">Deep dive into indexing, execution plans, and query structure adjustments to improve database efficiency and scale database operations under high loads.</p>
+        <div class="wc-footer">
+          <span class="wc-category">Database</span>
+          <a href="https://medium.com/@pratikgmodi22" target="_blank" class="wc-arrow" style="text-decoration:none;cursor:none;color:var(--accent)">Read on Medium ↗</a>
+        </div>
+      </div>
+    </div>
+    <div class="work-card reveal">
+      <div class="wc-body">
+        <span class="wc-num">02</span>
+        <h3 class="wc-title">Analyzing E-Commerce User Behavior with Python & Pandas</h3>
+        <p class="wc-desc" style="margin-bottom: 24px;">How to parse transactional data, clean up records, and visualize key revenue metrics to uncover actionable consumer trends and behaviors.</p>
+        <div class="wc-footer">
+          <span class="wc-category">Data Science</span>
+          <a href="https://medium.com/@pratikgmodi22" target="_blank" class="wc-arrow" style="text-decoration:none;cursor:none;color:var(--accent)">Read on Medium ↗</a>
+        </div>
+      </div>
+    </div>
+    <div class="work-card reveal">
+      <div class="wc-body">
+        <span class="wc-num">03</span>
+        <h3 class="wc-title">Leveraging AI Workflows for Business Task Automations</h3>
+        <p class="wc-desc" style="margin-bottom: 24px;">Automating routine processes using modern API integrations, low-code automation tools, and custom webhook solutions for improved productivity.</p>
+        <div class="wc-footer">
+          <span class="wc-category">AI & Automation</span>
+          <a href="https://medium.com/@pratikgmodi22" target="_blank" class="wc-arrow" style="text-decoration:none;cursor:none;color:var(--accent)">Read on Medium ↗</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div style="text-align: center; margin-top: 60px;" class="reveal reveal-delay-2">
+    <a href="https://medium.com/@pratikgmodi22" target="_blank" class="btn-primary" style="text-decoration: none;">View All on Medium →</a>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-name">Pratik Modi</div>
+  <div class="footer-copy">© 2026 — All rights reserved</div>
+  <div class="footer-links">
+    <a href="https://github.com/PratikModi22" target="_blank">GitHub</a>
+    <a href="https://linkedin.com/in/pratik-modi-11ba02283" target="_blank">LinkedIn</a>
+    <a href="mailto:pratikgmodi22@gmail.com">Email</a>
+    <a href="https://instagram.com/pratikmodi22" target="_blank">Instagram</a>
+  </div>
+</footer>
+
+<script src="js/portfolio.js"></script>
+</body>
+</html>

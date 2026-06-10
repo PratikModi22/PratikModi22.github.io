@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Pratik Modi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,600;1,700&family=Playfair+Display:wght@400;500&family=DM+Mono:wght@300;400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Progress Bar -->
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- Custom Cursor -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- Nav -->
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">Pratik Modi</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="blogs.html">Blogs</a></li>
+    <li><a href="resume.html">Resume</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile Drawer -->
+<div class="mobile-drawer" id="mobileDrawer">
+  <a href="index.html" class="drawer-link">Home</a>
+  <a href="about.html" class="drawer-link">About</a>
+  <a href="projects.html" class="drawer-link">Projects</a>
+  <a href="blogs.html" class="drawer-link">Blogs</a>
+  <a href="resume.html" class="drawer-link">Resume</a>
+  <a href="contact.html" class="drawer-link">Contact</a>
+</div>
+
+<!-- ── CONTACT ── -->
+<section id="contact" style="padding-top: 140px;">
+  <div class="contact-left">
+    <div class="section-label reveal">Get In Touch</div>
+    <h2 class="contact-heading reveal reveal-delay-1 parallax-heading" id="contactHeading">
+      Let's build something<br><em style="color:var(--accent)">great</em> together.
+    </h2>
+
+    <div class="contact-links">
+      <a href="mailto:pratikgmodi22@gmail.com" class="contact-link reveal reveal-delay-1">
+        <div>
+          <div class="contact-link-label">Email</div>
+          <div class="contact-link-value">pratikgmodi22@gmail.com</div>
+        </div>
+        <span class="contact-link-arrow">↗</span>
+      </a>
+      <a href="https://linkedin.com/in/pratik-modi-11ba02283" target="_blank" class="contact-link reveal reveal-delay-2">
+        <div>
+          <div class="contact-link-label">LinkedIn</div>
+          <div class="contact-link-value">linkedin.com/in/pratik-modi-11ba02283</div>
+        </div>
+        <span class="contact-link-arrow">↗</span>
+      </a>
+      <a href="https://github.com/PratikModi22" target="_blank" class="contact-link reveal reveal-delay-3">
+        <div>
+          <div class="contact-link-label">GitHub</div>
+          <div class="contact-link-value">github.com/PratikModi22</div>
+        </div>
+        <span class="contact-link-arrow">↗</span>
+      </a>
+      <a href="https://instagram.com/pratikmodi22" target="_blank" class="contact-link reveal reveal-delay-4">
+        <div>
+          <div class="contact-link-label">Instagram</div>
+          <div class="contact-link-value">@pratikmodi22</div>
+        </div>
+        <span class="contact-link-arrow">↗</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="contact-right reveal reveal-delay-2">
+    <div class="section-label">Send A Message</div>
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" id="contactName" placeholder="Your full name">
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="contactEmail" placeholder="your@email.com">
+    </div>
+    <div class="form-group">
+      <label for="message">Message</label>
+      <textarea id="contactMessage" placeholder="Tell me about your project..."></textarea>
+    </div>
+    <button class="btn-submit" id="submitBtn">Send Message →</button>
+    <div id="formMsg" style="margin-top:12px;font-family:'DM Mono',monospace;font-size:11px;color:var(--accent);opacity:0;transition:opacity 0.4s"></div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-name">Pratik Modi</div>
+  <div class="footer-copy">© 2026 — All rights reserved</div>
+  <div class="footer-links">
+    <a href="https://github.com/PratikModi22" target="_blank">GitHub</a>
+    <a href="https://linkedin.com/in/pratik-modi-11ba02283" target="_blank">LinkedIn</a>
+    <a href="mailto:pratikgmodi22@gmail.com">Email</a>
+    <a href="https://instagram.com/pratikmodi22" target="_blank">Instagram</a>
+  </div>
+</footer>
+
+<script src="js/portfolio.js"></script>
+</body>
+</html>

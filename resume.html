@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume | Pratik Modi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,600;1,700&family=Playfair+Display:wght@400;500&family=DM+Mono:wght@300;400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Progress Bar -->
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- Custom Cursor -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- Nav -->
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">Pratik Modi</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="blogs.html">Blogs</a></li>
+    <li><a href="resume.html">Resume</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile Drawer -->
+<div class="mobile-drawer" id="mobileDrawer">
+  <a href="index.html" class="drawer-link">Home</a>
+  <a href="about.html" class="drawer-link">About</a>
+  <a href="projects.html" class="drawer-link">Projects</a>
+  <a href="blogs.html" class="drawer-link">Blogs</a>
+  <a href="resume.html" class="drawer-link">Resume</a>
+  <a href="contact.html" class="drawer-link">Contact</a>
+</div>
+
+<!-- ── RESUME SECTION ── -->
+<div class="resume-section" style="padding-top: 140px;">
+  
+  <!-- Print Button Wrap -->
+  <div class="btn-print-wrap">
+    <button class="btn-print" onclick="window.print()">Print Resume →</button>
+  </div>
+
+  <!-- Resume Header -->
+  <header class="resume-header">
+    <div class="resume-info">
+      <h1>Pratik Modi</h1>
+      <p>SQL Developer & Data Analyst</p>
+    </div>
+    <div class="resume-contact">
+      <span>📧 <a href="mailto:pratikgmodi22@gmail.com">pratikgmodi22@gmail.com</a></span>
+      <span>🔗 <a href="https://linkedin.com/in/pratik-modi-11ba02283" target="_blank">LinkedIn Profile</a></span>
+      <span>💻 <a href="https://github.com/PratikModi22" target="_blank">GitHub Profile</a></span>
+      <span>📍 Chhatrapati Sambhajinagar, MH, India</span>
+    </div>
+  </header>
+
+  <!-- Resume Layout Grid -->
+  <div class="resume-layout">
+    
+    <!-- Left Column: Experience & Projects -->
+    <main class="resume-body-left">
+      
+      <!-- Experience Section -->
+      <section>
+        <h3 class="resume-block-title">Professional Experience</h3>
+        
+        <div class="resume-item">
+          <div class="resume-item-header">
+            <h4 class="resume-item-title">SQL Intern</h4>
+            <span class="resume-item-date">July 2025 — Present</span>
+          </div>
+          <div class="resume-item-org">Yardi Systems, Pune</div>
+          <ul class="resume-item-details">
+            <li>Designed and developed SQL database solutions including complex stored procedures, triggers, database functions, and packages.</li>
+            <li>Collaborated on building automated reporting systems to streamline client business metrics and operations.</li>
+            <li>Analyzed SQL execution plans to identify query bottlenecks, optimize index usage, and improve data processing speeds.</li>
+            <li>Ensured data integrity and transactional consistency across multiple relational database environments.</li>
+          </ul>
+        </div>
+
+        <div class="resume-item">
+          <div class="resume-item-header">
+            <h4 class="resume-item-title">AI Automation & Web Dev Intern</h4>
+            <span class="resume-item-date">Dec 2024 — June 2025</span>
+          </div>
+          <div class="resume-item-org">Technical Internships</div>
+          <ul class="resume-item-details">
+            <li>Built AI-driven automation workflows to handle recurring data and operational tasks.</li>
+            <li>Developed responsive front-end layouts and handled database integrations for full-stack platforms.</li>
+            <li>Optimized custom API endpoints and integrated third-party services to enhance web app capabilities.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Key Projects Section -->
+      <section>
+        <h3 class="resume-block-title">Key Projects</h3>
+        
+        <div class="resume-item">
+          <div class="resume-item-header">
+            <h4 class="resume-item-title">E-Commerce Data Analytics</h4>
+            <span class="resume-item-date">SQL & Python</span>
+          </div>
+          <ul class="resume-item-details">
+            <li>Analyzed over 10,000+ transactional records using SQL and Python to extract customer purchasing trends.</li>
+            <li>Created custom visualization dashboards (Matplotlib, Seaborn) to assist in business decision processes.</li>
+          </ul>
+        </div>
+
+        <div class="resume-item">
+          <div class="resume-item-header">
+            <h4 class="resume-item-title">Green Hash Platform</h4>
+            <span class="resume-item-date">PostgreSQL & Supabase</span>
+          </div>
+          <ul class="resume-item-details">
+            <li>Co-developed a community-led waste tracking platform featuring transparent cleanup progress analytics.</li>
+            <li>Implemented the backend infrastructure using Supabase and optimized PostgreSQL query performance.</li>
+          </ul>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Right Column: Skills, Education, Achievements -->
+    <aside class="resume-body-right">
+      
+      <!-- Skills Section -->
+      <section>
+        <h3 class="resume-block-title">Technical Skills</h3>
+        
+        <div class="resume-skill-cat">
+          <h4>Databases & SQL</h4>
+          <div class="resume-skills-list">
+            <span class="resume-skill-badge">PostgreSQL</span>
+            <span class="resume-skill-badge">MySQL</span>
+            <span class="resume-skill-badge">SQL Server</span>
+            <span class="resume-skill-badge">Procedures</span>
+            <span class="resume-skill-badge">Triggers</span>
+            <span class="resume-skill-badge">Query Tuning</span>
+          </div>
+        </div>
+
+        <div class="resume-skill-cat">
+          <h4>Programming & Data</h4>
+          <div class="resume-skills-list">
+            <span class="resume-skill-badge">Python</span>
+            <span class="resume-skill-badge">Pandas</span>
+            <span class="resume-skill-badge">NumPy</span>
+            <span class="resume-skill-badge">Power BI</span>
+            <span class="resume-skill-badge">Data Visualisation</span>
+          </div>
+        </div>
+
+        <div class="resume-skill-cat">
+          <h4>Automation & Web</h4>
+          <div class="resume-skills-list">
+            <span class="resume-skill-badge">AI Automation</span>
+            <span class="resume-skill-badge">REST APIs</span>
+            <span class="resume-skill-badge">JavaScript</span>
+            <span class="resume-skill-badge">HTML/CSS</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Education Section -->
+      <section>
+        <h3 class="resume-block-title">Education</h3>
+        <div class="resume-item">
+          <div class="resume-item-header" style="margin-bottom:4px;">
+            <h4 class="resume-item-title" style="font-size:15px;">B.Tech in Information Technology</h4>
+          </div>
+          <div class="resume-item-org" style="margin-bottom:6px;">MGM University, Chhatrapati Sambhajinagar</div>
+          <div class="resume-item-date" style="display:block;margin-bottom:8px;">Expected Graduation: 2026</div>
+        </div>
+      </section>
+
+      <!-- Achievements & Leadership Section -->
+      <section>
+        <h3 class="resume-block-title">Achievements</h3>
+        
+        <div class="resume-item" style="margin-bottom:18px;">
+          <div class="resume-item-header" style="margin-bottom:4px;">
+            <h4 class="resume-item-title" style="font-size:14px;">Supernova 1.0 Runner-Up</h4>
+          </div>
+          <p style="font-family:'Jost',sans-serif;font-size:13px;color:var(--ink-soft);line-height:1.4;">State-level hackathon achievement competing with engineering teams.</p>
+        </div>
+
+        <div class="resume-item">
+          <div class="resume-item-header" style="margin-bottom:4px;">
+            <h4 class="resume-item-title" style="font-size:14px;">GDSC Tech Committee</h4>
+          </div>
+          <p style="font-family:'Jost',sans-serif;font-size:13px;color:var(--ink-soft);line-height:1.4;">Organized technical workshops, study jams, and community hackathons.</p>
+        </div>
+      </section>
+
+    </aside>
+
+  </div>
+
+</div>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-name">Pratik Modi</div>
+  <div class="footer-copy">© 2026 — All rights reserved</div>
+  <div class="footer-links">
+    <a href="https://github.com/PratikModi22" target="_blank">GitHub</a>
+    <a href="https://linkedin.com/in/pratik-modi-11ba02283" target="_blank">LinkedIn</a>
+    <a href="mailto:pratikgmodi22@gmail.com">Email</a>
+    <a href="https://instagram.com/pratikmodi22" target="_blank">Instagram</a>
+  </div>
+</footer>
+
+<script src="js/portfolio.js"></script>
+</body>
+</html>

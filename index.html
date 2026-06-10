@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pratik Modi — SQL Developer & Data Analyst</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,600;1,700&family=Playfair+Display:wght@400;500&family=DM+Mono:wght@300;400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Progress Bar -->
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- Custom Cursor -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- Nav -->
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">Pratik Modi</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="blogs.html">Blogs</a></li>
+    <li><a href="resume.html">Resume</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile Drawer -->
+<div class="mobile-drawer" id="mobileDrawer">
+  <a href="index.html" class="drawer-link">Home</a>
+  <a href="about.html" class="drawer-link">About</a>
+  <a href="projects.html" class="drawer-link">Projects</a>
+  <a href="blogs.html" class="drawer-link">Blogs</a>
+  <a href="resume.html" class="drawer-link">Resume</a>
+  <a href="contact.html" class="drawer-link">Contact</a>
+</div>
+
+<!-- ── HERO ── -->
+<section id="hero">
+  <!-- Background layers -->
+  <div class="hero-grid-pattern"></div>
+  <div class="hero-orb hero-orb-1"></div>
+  <div class="hero-orb hero-orb-2"></div>
+  <div class="hero-orb hero-orb-3"></div>
+  <canvas id="heroCanvas"></canvas>
+  <div class="hero-mouse-glow" id="heroGlow"></div>
+
+  <!-- Main content grid -->
+  <div class="hero-inner">
+
+    <!-- LEFT: Portrait + floating cards -->
+    <div class="hero-portrait-wrap">
+      <div class="hero-portrait-glow"></div>
+
+      <!-- Floating cards -->
+      <!-- <div class="hero-float-card float-card-1">
+        <div class="float-card-icon">📊</div>
+        <div class="float-card-text">
+          <span class="float-card-title">E-Commerce Analytics</span>
+          <span class="float-card-sub">10,000+ records analyzed</span>
+        </div>
+      </div> -->
+      <!-- <div class="hero-float-card float-card-2">
+        <div class="float-card-icon">🏆</div>
+        <div class="float-card-text">
+          <span class="float-card-title">2× Hackathon Winner</span>
+          <span class="float-card-sub">State Level Achievement</span>
+        </div>
+      </div>
+      <div class="hero-float-card float-card-3">
+        <div class="float-card-icon">🗄️</div>
+        <div class="float-card-text">
+          <span class="float-card-title">SQL Intern @ Yardi</span>
+          <span class="float-card-sub">Procedures · Reports</span>
+        </div>
+      </div>
+      <div class="hero-float-card float-card-4">
+        <div class="float-card-icon">♻️</div>
+        <div class="float-card-text">
+          <span class="float-card-title">Green Hash Platform</span>
+          <span class="float-card-sub">Waste Management</span>
+        </div>
+      </div> -->
+
+      <!-- Portrait -->
+      <div class="hero-portrait-card">
+        <img src="images/image_1.png" alt="Pratik Modi — SQL Developer & Data Analyst">
+        <div class="hero-portrait-chip">Let's Connect</div>
+      </div>
+    </div>
+
+    <!-- RIGHT: Content -->
+    <div class="hero-right">
+      <div class="hero-eyebrow">Portfolio 2026</div>
+      <div class="hero-hi">Hi, I'm</div>
+      <h1 class="hero-name">Pratik<br>Modi</h1>
+      <div class="hero-roles-wrap">
+        <span class="hero-role-tag">SQL Developer</span>
+        <span class="hero-role-tag">Data Analyst</span>
+        <span class="hero-role-tag">AI Enthusiast</span>
+      </div>
+      <p class="hero-desc">Transforming raw data into meaningful business insights through SQL, Python, Analytics, and AI-powered solutions.</p>
+      <div class="hero-location">Chhatrapati Sambhajinagar, India</div>
+      <div class="hero-ctas">
+        <a href="projects.html" class="btn-primary">View Projects</a>
+        <a href="contact.html" class="btn-outline">Let's Connect</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="hero-scroll">
+    <div class="hero-scroll-line"></div>
+    <span class="hero-scroll-text">Scroll</span>
+  </div>
+
+  <!-- Tech marquee -->
+  <div class="hero-marquee-wrap">
+    <div class="hero-marquee-track">
+      <span>SQL</span><span class="dot">◆</span>
+      <span>Python</span><span class="dot">◆</span>
+      <span>Power BI</span><span class="dot">◆</span>
+      <span>PostgreSQL</span><span class="dot">◆</span>
+      <span>MySQL</span><span class="dot">◆</span>
+      <span>AI Automation</span><span class="dot">◆</span>
+      <span>Analytics</span><span class="dot">◆</span>
+      <span>Pandas</span><span class="dot">◆</span>
+      <span>Data Visualization</span><span class="dot">◆</span>
+      <span>SQL Server</span><span class="dot">◆</span>
+      <span>SQL</span><span class="dot">◆</span>
+      <span>Python</span><span class="dot">◆</span>
+      <span>Power BI</span><span class="dot">◆</span>
+      <span>PostgreSQL</span><span class="dot">◆</span>
+      <span>MySQL</span><span class="dot">◆</span>
+      <span>AI Automation</span><span class="dot">◆</span>
+      <span>Analytics</span><span class="dot">◆</span>
+      <span>Pandas</span><span class="dot">◆</span>
+      <span>Data Visualization</span><span class="dot">◆</span>
+      <span>SQL Server</span><span class="dot">◆</span>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-name">Pratik Modi</div>
+  <div class="footer-copy">© 2026 — All rights reserved</div>
+  <div class="footer-links">
+    <a href="https://github.com/PratikModi22" target="_blank">GitHub</a>
+    <a href="https://linkedin.com/in/pratik-modi-11ba02283" target="_blank">LinkedIn</a>
+    <a href="mailto:pratikgmodi22@gmail.com">Email</a>
+    <a href="https://instagram.com/pratikmodi22" target="_blank">Instagram</a>
+  </div>
+</footer>
+
+<script src="js/portfolio.js"></script>
+</body>
+</html>
