@@ -1,0 +1,133 @@
+{
+  "personal": {
+    "name": "Pratik Modi",
+    "title": "Data and Full Stack Engineer",
+    "greeting": "Welcome to my 3D space.",
+    "subtitle": "Data and full stack engineer",
+    "tagline1": "portfolio",
+    "tagline2": "",
+    "location": "Pune, Maharashtra, India",
+    "email": "pratikgmodi22@gmail.com",
+    "phone": "+91 93228 48562",
+    "linkedin": "https://www.linkedin.com/in/pratik-modi-11ba02283",
+    "github": "https://github.com/PratikModi22",
+    "summary": "Results-driven final-year B.Tech (IT) student with hands-on experience in SQL, Python, data analytics, and business intelligence reporting. Skilled at translating complex business requirements into robust technical solutions, working with large-scale datasets, and communicating data-driven insights to stakeholders. Currently interning at Yardi Systems writing SQL stored procedures, packages, and reports. 2× State-Level Hackathon Winner."
+  },
+  "certifications": [
+    "Google Cloud SkillBoost (GCP)",
+    "Microsoft Learn (Azure & AI Basics)",
+    "Postman API Fundamentals",
+    "Infosys Springboard (Python & Data Analytics)",
+    "Udemy (SQL & Python)",
+    "2× State-Level Hackathon Winner",
+    "Forage Virtual Internships",
+    "Let's Upgrade"
+  ],
+  "education": {
+    "degree": "Bachelor of Technology — Information Technology",
+    "institution": "MGM University – IICT, Chh. Sambhajinagar",
+    "cgpa": "7.9 / 10.0",
+    "period": "2022 – 2026"
+  },
+  "skills": {
+    "languages": [
+      "SQL", "Python", "JavaScript", "HTML", "CSS", "React (Tailwind, Bootstrap)"
+    ],
+    "data_and_bi": [
+      "Pandas", "NumPy", "Matplotlib", "Seaborn", "Excel", "EDA", "Power BI", "SSMS", "SQL Profiler"
+    ],
+    "databases": [
+      "MySQL", "PostgreSQL", "SQL Server", "Supabase", "RDBMS Design", "Query Optimization", "Stored Procedures", "CTEs"
+    ],
+    "tools": [
+      "GitHub", "Postman", "Jupyter Notebook", "n8n", "Odoo CRM", "WordPress", "Shopify"
+    ],
+    "soft_skills": [
+      "Client Communication", "Agile Collaboration", "Stakeholder Reporting", "Problem-Solving"
+    ]
+  },
+  "achievements": [
+    {
+      "title": "2× State-Level Hackathon Winner",
+      "category": "Competitive Engineering & Prototyping",
+      "description": "Delivered high-impact technological solutions under competitive time pressure; recognized twice across university hackathons for technical design, architecture, and working prototypes.",
+      "badge": "2× State Champion"
+    },
+    {
+      "title": "Software Engineer Intern at Yardi Systems",
+      "category": "Enterprise Database Engineering",
+      "description": "Engineered enterprise Stored Procedures, SQL packages, CTEs, triggers, and high-performance reporting pipelines for large-scale production database systems.",
+      "badge": "Enterprise Intern"
+    },
+    {
+      "title": "TEDx MGMU — Organizing Committee Member",
+      "category": "Cross-functional Team & Event Leadership",
+      "description": "Coordinated speakers, schedules, and event logistics for official TEDx sessions; led cross-functional student teams to ensure seamless event execution and high attendee experience.",
+      "badge": "Organizing Committee"
+    },
+    {
+      "title": "Google Developer Student Clubs (GDSC) — Technical Committee",
+      "category": "Technical Workshops & Student Mentorship",
+      "description": "Planned and conducted hands-on programming workshops on Python, web development, and data tools; collaborated with peers to instruct 100+ students.",
+      "badge": "Technical Committee"
+    },
+    {
+      "title": "Academic Distinction — B.Tech IT",
+      "category": "MGM University – IICT",
+      "description": "Maintained an impressive 7.9 / 10.0 CGPA throughout coursework in Information Technology while balancing software engineering and industry internships.",
+      "badge": "CGPA 7.9 / 10.0"
+    }
+  ],
+  "projects": [
+    {
+      "title": "E-Commerce Data Analyst",
+      "category": "Python, MySQL, Data Analytics & Business Intelligence",
+      "bullets": [
+        "Processed 10,000+ e-commerce transaction records using Python (Pandas, Matplotlib, Seaborn) and MySQL; engineered data cleaning pipelines to ensure analysis-ready datasets.",
+        "Wrote optimized SQL queries to analyze sales trends, customer segmentation, and purchasing behavior.",
+        "Produced BI-style visualizations and dashboards to communicate key business findings clearly to non-technical stakeholders."
+      ],
+      "tags": ["Python", "MySQL", "Pandas", "Matplotlib", "Seaborn", "SQL Optimization", "Business Intelligence", "EDA"],
+      "action_label": "View E-Commerce Project on GitHub",
+      "action_url": "https://github.com/PratikModi22/ecommerce-data-analysis"
+    },
+    {
+      "title": "Green Hash — Transparent Waste Management System",
+      "category": "Full-Stack, PostgreSQL, Supabase, Agile Delivery",
+      "bullets": [
+        "Designed and built a civic-tech platform with Supabase (PostgreSQL) backend, applying RDBMS schema design principles to structure community waste reporting data efficiently.",
+        "Implemented an admin dashboard for waste report management, community data visibility, and real-time status tracking.",
+        "Delivered end-to-end product development using agile practices and iterative engineering sprints."
+      ],
+      "tags": ["Supabase", "PostgreSQL", "Full-Stack", "RDBMS Design", "Agile", "Admin Dashboard", "Civic Tech"],
+      "action_label": "View Green Hash on GitHub",
+      "action_url": "https://github.com/PratikModi22/green-hash"
+    }
+  ],
+  "experience": [
+    {
+      "role": "Software Engineer Intern",
+      "company": "Yardi Systems India",
+      "location": "Pune, India",
+      "period": "Jan 2026 – June 2026",
+      "bullets": [
+        "Developed Stored Procedures (SP) and SQL packages to automate business logic and reporting workflows, translating functional requirements into reliable and scalable database solutions.",
+        "Wrote advanced queries using CTEs and cursors for complex multi-step data processing, and implemented triggers to enforce business rules and maintain data integrity automatically.",
+        "Built structured reports by joining large relational datasets, applying aggregations, and formatting output to meet business reporting standards.",
+        "Used SSMS and SQL Profiler for query performance tuning, execution plan analysis, and troubleshooting data issues in a production database environment."
+      ]
+    },
+    {
+      "role": "Web Development & AI Intern",
+      "company": "The Startup Mentor",
+      "location": "Remote",
+      "period": "Oct 2024 – July 2025",
+      "bullets": [
+        "Developed and deployed client websites using WordPress and Shopify; built creative carousels, portfolio pages, and landing pages that improved client engagement and brand presence.",
+        "Reviewed large volumes of business and market data to craft data-driven LinkedIn posts, articles, and blogs; communicated insights through compelling storytelling to grow audience engagement.",
+        "Produced technical writing including product documentation, blog posts, and outreach copy; drove SEO strategy and tracked campaign performance using Excel and Odoo CRM.",
+        "Built AI automation workflows using n8n, reducing manual reporting effort and improving operational efficiency across client campaigns."
+      ]
+    }
+  ]
+}
