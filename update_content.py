@@ -646,9 +646,453 @@ def generate_html_from_config(config_path="portfolio.config.json", output_path="
     :root[data-theme="dark"] .contact-link:hover {{
       color: #7dd3fc !important;
     }}
+
+    /* ========================================================
+       FLOATING SIDE MENU & NAVBAR (NON-INTRUSIVE 3D DESIGN)
+       ======================================================== */
+    .nav-toggle-btn {{
+      position: fixed;
+      top: 36px;
+      left: 36px;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 18px;
+      border-radius: 9999px;
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid rgba(15, 23, 42, 0.1);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      color: #0f172a;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.84rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      box-shadow: 0 4px 20px rgba(15, 23, 42, 0.06);
+      cursor: pointer;
+      transition: all 0.25s ease;
+      user-select: none;
+    }}
+    .nav-toggle-btn:hover {{
+      transform: translateY(-2px);
+      background: rgba(255, 255, 255, 0.95);
+      border-color: #2563eb;
+      color: #2563eb;
+      box-shadow: 0 6px 24px rgba(37, 99, 235, 0.22);
+    }}
+    .nav-toggle-btn .hamburger-icon {{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 4px;
+      width: 18px;
+      height: 14px;
+    }}
+    .nav-toggle-btn .hamburger-line {{
+      width: 100%;
+      height: 2px;
+      background-color: currentColor;
+      border-radius: 2px;
+      transition: all 0.25s ease;
+    }}
+    :root[data-theme="dark"] .nav-toggle-btn {{
+      background: rgba(15, 23, 42, 0.72);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      color: #f8fafc;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.45);
+    }}
+    :root[data-theme="dark"] .nav-toggle-btn:hover {{
+      background: rgba(15, 23, 42, 0.92);
+      border-color: #38bdf8;
+      color: #38bdf8;
+      box-shadow: 0 6px 24px rgba(56, 189, 248, 0.35);
+    }}
+
+    /* Backdrop */
+    .nav-backdrop {{
+      position: fixed;
+      inset: 0;
+      background: rgba(11, 15, 25, 0.45);
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+      z-index: 9998;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }}
+    .nav-backdrop.active {{
+      opacity: 1;
+      visibility: visible;
+    }}
+
+    /* Slide-out Drawer */
+    .side-nav-drawer {{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 340px;
+      max-width: 88vw;
+      height: 100vh;
+      height: 100dvh;
+      background: rgba(248, 250, 252, 0.92);
+      backdrop-filter: blur(28px);
+      -webkit-backdrop-filter: blur(28px);
+      border-right: 1px solid rgba(15, 23, 42, 0.1);
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 2.4rem 2rem;
+      box-shadow: 16px 0 40px rgba(15, 23, 42, 0.12);
+      transform: translateX(-100%);
+      transition: transform 0.38s cubic-bezier(0.16, 1, 0.3, 1);
+      box-sizing: border-box;
+      overflow-y: auto;
+    }}
+    :root[data-theme="dark"] .side-nav-drawer {{
+      background: rgba(11, 15, 25, 0.92);
+      border-right: 1px solid rgba(56, 189, 248, 0.22);
+      box-shadow: 16px 0 40px rgba(0, 0, 0, 0.6);
+    }}
+    .side-nav-drawer.open {{
+      transform: translateX(0);
+    }}
+
+    .drawer-header {{
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 2.2rem;
+      padding-bottom: 1.2rem;
+      border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+    }}
+    :root[data-theme="dark"] .drawer-header {{
+      border-bottom-color: rgba(255, 255, 255, 0.1);
+    }}
+    .drawer-brand-name {{
+      font-family: 'Satisfy', cursive !important;
+      font-size: 2.2rem;
+      color: #0f172a;
+      line-height: 1.1;
+    }}
+    :root[data-theme="dark"] .drawer-brand-name {{
+      color: #f8fafc;
+    }}
+    .drawer-brand-role {{
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #2563eb;
+      margin-top: 4px;
+    }}
+    :root[data-theme="dark"] .drawer-brand-role {{
+      color: #38bdf8;
+    }}
+
+    .drawer-close-btn {{
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: rgba(15, 23, 42, 0.05);
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      color: #0f172a;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-size: 1.2rem;
+      line-height: 1;
+    }}
+    .drawer-close-btn:hover {{
+      background: rgba(37, 99, 235, 0.12);
+      color: #2563eb;
+      transform: rotate(90deg);
+    }}
+    :root[data-theme="dark"] .drawer-close-btn {{
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.12);
+      color: #f8fafc;
+    }}
+    :root[data-theme="dark"] .drawer-close-btn:hover {{
+      background: rgba(56, 189, 248, 0.2);
+      color: #38bdf8;
+    }}
+
+    .drawer-nav-list {{
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      flex: 1;
+    }}
+    .drawer-nav-item {{
+      display: flex;
+      align-items: center;
+      padding: 0.75rem 1rem;
+      border-radius: 12px;
+      color: var(--color-text);
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      transition: all 0.22s ease;
+      cursor: pointer;
+    }}
+    .drawer-nav-item:hover,
+    .drawer-nav-item.active {{
+      background: rgba(37, 99, 235, 0.09);
+      color: #2563eb !important;
+      transform: translateX(4px);
+    }}
+    :root[data-theme="dark"] .drawer-nav-item:hover,
+    :root[data-theme="dark"] .drawer-nav-item.active {{
+      background: rgba(56, 189, 248, 0.14);
+      color: #38bdf8 !important;
+    }}
+    .drawer-nav-num {{
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: #2563eb;
+      margin-right: 14px;
+      letter-spacing: 0.05em;
+      opacity: 0.85;
+    }}
+    :root[data-theme="dark"] .drawer-nav-num {{
+      color: #38bdf8;
+    }}
+
+    .drawer-footer {{
+      margin-top: 2rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid rgba(15, 23, 42, 0.08);
+    }}
+    :root[data-theme="dark"] .drawer-footer {{
+      border-top-color: rgba(255, 255, 255, 0.1);
+    }}
+    .drawer-social-links {{
+      display: flex;
+      gap: 0.6rem;
+      margin-bottom: 0.85rem;
+    }}
+    .drawer-social-btn {{
+      flex: 1;
+      padding: 0.55rem 0.85rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      border-radius: 9999px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-decoration: none;
+      background: rgba(15, 23, 42, 0.04);
+      border: 1px solid rgba(15, 23, 42, 0.1);
+      color: var(--color-text);
+      transition: all 0.2s ease;
+    }}
+    .drawer-social-btn:hover {{
+      background: #2563eb;
+      border-color: #2563eb;
+      color: #ffffff;
+      transform: translateY(-2px);
+    }}
+    :root[data-theme="dark"] .drawer-social-btn {{
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(56, 189, 248, 0.25);
+      color: #f8fafc;
+    }}
+    :root[data-theme="dark"] .drawer-social-btn:hover {{
+      background: #38bdf8;
+      border-color: #38bdf8;
+      color: #0b0f19;
+    }}
+    .drawer-copy {{
+      font-size: 0.75rem;
+      opacity: 0.6;
+      text-align: center;
+    }}
+
+    /* ========================================================
+       RESPONSIVE DESIGN & MOBILE OPTIMIZATIONS (320px - 768px)
+       ======================================================== */
+    @media screen and (max-width: 768px) {{
+      .nav-toggle-btn {{
+        top: 20px;
+        left: max(18px, 4%);
+        padding: 7px 13px;
+        font-size: 0.78rem;
+        gap: 7px;
+      }}
+      .nav-toggle-btn .hamburger-icon {{
+        width: 15px;
+        height: 12px;
+        gap: 3px;
+      }}
+      
+      ._titleJa_1vzy9_8 {{
+        font-size: clamp(2.4rem, 8.5vw, 3.8rem) !important;
+        line-height: 1.15 !important;
+      }}
+      ._desc_1vzy9_10 {{
+        font-size: 0.92rem !important;
+        letter-spacing: 0.07em !important;
+        margin-top: 0.4rem !important;
+      }}
+      ._greeting_1vzy9_7 {{
+        font-size: clamp(1.4rem, 5vw, 2rem) !important;
+      }}
+      .loading-title {{
+        font-size: 2.4rem !important;
+      }}
+      
+      ._heading2_nnyah_41 {{
+        font-size: clamp(1.8rem, 5.8vw, 2.3rem) !important;
+        line-height: 1.3 !important;
+        margin-top: 1.8rem !important;
+        margin-bottom: 0.65rem !important;
+      }}
+      ._text_nnyah_60 {{
+        font-size: 0.98rem !important;
+        line-height: 1.75 !important;
+        text-align: left !important;
+      }}
+      
+      .skill-category {{
+        padding: 1.05rem 1.15rem !important;
+        border-radius: 14px !important;
+        margin-bottom: 1.1rem !important;
+      }}
+      .skill-category-title {{
+        font-size: 1.6rem !important;
+        margin-bottom: 0.5rem !important;
+      }}
+      
+      .achievement-card {{
+        padding: 1.1rem 1.25rem !important;
+        border-radius: 14px !important;
+        margin-bottom: 1.1rem !important;
+      }}
+      .achievement-title {{
+        font-size: 1.7rem !important;
+      }}
+      .achievement-badge {{
+        font-size: 0.74rem !important;
+        padding: 0.25rem 0.7rem !important;
+      }}
+      
+      .exp-item {{
+        padding: 1.1rem 1.25rem !important;
+        border-radius: 14px !important;
+        margin-bottom: 1.2rem !important;
+      }}
+      .exp-role {{
+        font-size: 1.7rem !important;
+      }}
+      .exp-company {{
+        font-size: 0.88rem !important;
+      }}
+      
+      .custom-btn {{
+        width: 100% !important;
+        max-width: 320px !important;
+        display: block !important;
+        margin: 1.25rem auto 0 !important;
+      }}
+      .custom-btn-body {{
+        width: 100% !important;
+        padding: 0 1.5rem !important;
+      }}
+      
+      .contact-link {{
+        word-break: break-all !important;
+        overflow-wrap: anywhere !important;
+      }}
+      
+      ._content_nnyah_28 {{
+        width: 92% !important;
+        padding: 60px 0 20px !important;
+      }}
+      
+      ._content_akfz3_15 {{
+        padding: 0 6% !important;
+      }}
+      
+      /* Make bouncy arrow clickable on mobile */
+      ._scrollDownWrapper_1vzy9_142 {{
+        pointer-events: none;
+      }}
+      ._scrollDown_1vzy9_142 {{
+        pointer-events: auto !important;
+        cursor: pointer !important;
+      }}
+    }}
   </style>
 </head>
 <body>
+  <!-- Floating Side Menu Trigger Button -->
+  <button class="nav-toggle-btn" id="nav-toggle-btn" aria-label="Open Navigation Menu">
+    <div class="hamburger-icon">
+      <div class="hamburger-line"></div>
+      <div class="hamburger-line"></div>
+      <div class="hamburger-line"></div>
+    </div>
+    <span>Menu</span>
+  </button>
+
+  <!-- Side Menu Backdrop -->
+  <div class="nav-backdrop" id="nav-backdrop" aria-hidden="true"></div>
+
+  <!-- Slide-Out Side Nav Drawer -->
+  <aside class="side-nav-drawer" id="side-nav-drawer" aria-label="Sidebar Navigation">
+    <div>
+      <div class="drawer-header">
+        <div>
+          <div class="drawer-brand-name">Pratik Modi</div>
+          <div class="drawer-brand-role">Data & Full Stack Engineer</div>
+        </div>
+        <button class="drawer-close-btn" id="drawer-close-btn" aria-label="Close Navigation Menu">&times;</button>
+      </div>
+
+      <nav class="drawer-nav-list">
+        <a class="drawer-nav-item" data-target="hero">
+          <span class="drawer-nav-num">00</span>
+          <span>Home</span>
+        </a>
+        <a class="drawer-nav-item" data-target="section-about">
+          <span class="drawer-nav-num">01</span>
+          <span>About & Skills</span>
+        </a>
+        <a class="drawer-nav-item" data-target="section-projects">
+          <span class="drawer-nav-num">02</span>
+          <span>Projects</span>
+        </a>
+        <a class="drawer-nav-item" data-target="section-experience">
+          <span class="drawer-nav-num">03</span>
+          <span>Experience & Honors</span>
+        </a>
+        <a class="drawer-nav-item" data-target="section-contact">
+          <span class="drawer-nav-num">04</span>
+          <span>Contact</span>
+        </a>
+      </nav>
+    </div>
+
+    <div class="drawer-footer">
+      <div class="drawer-social-links">
+        <a href="{linkedin_url}" target="_blank" rel="noreferrer" class="drawer-social-btn">
+          <span>LinkedIn</span> &#8599;
+        </a>
+        <a href="{github_url}" target="_blank" rel="noreferrer" class="drawer-social-btn">
+          <span>GitHub</span> &#8599;
+        </a>
+      </div>
+      <div class="drawer-copy">&copy; 2026 Pratik Modi. 3D Isometric Portfolio.</div>
+    </div>
+  </aside>
+
   <!-- Loading Screen with Custom Text -->
   <div class="_loading_1dbn7_1" data-visible="true" data-js="loading">
     <div class="loading-container">
@@ -710,7 +1154,7 @@ def generate_html_from_config(config_path="portfolio.config.json", output_path="
     <!-- Scroll Content Container -->
     <main>
       <!-- Hero / Welcome -->
-      <div class="_root_1vzy9_1">
+      <div class="_root_1vzy9_1" id="hero">
         <p class="_greeting_1vzy9_7" data-js="greeting">
           {greeting_spans}
         </p>
@@ -746,7 +1190,7 @@ def generate_html_from_config(config_path="portfolio.config.json", output_path="
       <div class="_margin_hlgyv_1" data-js="margin"></div>
 
       <!-- Section 01: About Me & Skills Matrix -->
-      <section class="_section_nnyah_1" data-color="about" data-side="left" data-js="section">
+      <section class="_section_nnyah_1" id="section-about" data-color="about" data-side="left" data-js="section">
         <div class="_hero_18wwn_1" data-color="about" data-active="false" data-js="hero">
           <h1 class="_main_18wwn_28">
             <span class="_text_18wwn_40">
@@ -816,7 +1260,7 @@ def generate_html_from_config(config_path="portfolio.config.json", output_path="
       <div class="_margin_hlgyv_1" data-js="margin"></div>
 
       <!-- Section 02: Featured Projects -->
-      <section class="_section_nnyah_1" data-color="works" data-side="right" data-js="section">
+      <section class="_section_nnyah_1" id="section-projects" data-color="works" data-side="right" data-js="section">
         <div class="_hero_18wwn_1" data-color="works" data-active="false" data-js="hero">
           <h1 class="_main_18wwn_28">
             <span class="_text_18wwn_40">
@@ -854,7 +1298,7 @@ def generate_html_from_config(config_path="portfolio.config.json", output_path="
       <div class="_margin_hlgyv_1" data-js="margin"></div>
 
       <!-- Section 03: Professional Experience & Honors -->
-      <section class="_section_nnyah_1" data-color="works" data-side="left" data-js="section">
+      <section class="_section_nnyah_1" id="section-experience" data-color="works" data-side="left" data-js="section">
         <div class="_content_nnyah_28">
           <h2 class="_heading2_nnyah_41" style="font-size: 3rem !important; margin-bottom: 1.2rem;">
             Professional Experience
@@ -873,7 +1317,7 @@ def generate_html_from_config(config_path="portfolio.config.json", output_path="
       <div class="_margin_hlgyv_1" data-js="margin"></div>
 
       <!-- Section 04: Contact -->
-      <section class="_section_nnyah_1" data-color="contact" data-side="left" data-js="section">
+      <section class="_section_nnyah_1" id="section-contact" data-color="contact" data-side="left" data-js="section">
         <div class="_hero_18wwn_1" data-color="contact" data-active="false" data-js="hero">
           <h1 class="_main_18wwn_28">
             <span class="_text_18wwn_40">
@@ -907,7 +1351,7 @@ def generate_html_from_config(config_path="portfolio.config.json", output_path="
       <div class="_margin_hlgyv_1" data-js="margin"></div>
 
       <!-- Section 05: Finally / Footer -->
-      <section class="_section_akfz3_1" data-js="section">
+      <section class="_section_akfz3_1" id="section-finally" data-js="section">
         <div class="_hero_18wwn_1" data-color="finally" data-active="false" data-js="hero">
           <h1 class="_main_18wwn_28">
             <span class="_text_18wwn_40">
@@ -938,6 +1382,75 @@ def generate_html_from_config(config_path="portfolio.config.json", output_path="
   <div class="_container_11oj8_1" data-scrollbar="container" data-visible="false">
     <div class="_thumb_11oj8_18" data-scrollbar="thumb"></div>
   </div>
+
+  <!-- Interactive Side Menu & Smooth Scroll Controller -->
+  <script>
+    (function() {{
+      const toggleBtn = document.getElementById('nav-toggle-btn');
+      const drawer = document.getElementById('side-nav-drawer');
+      const backdrop = document.getElementById('nav-backdrop');
+      const closeBtn = document.getElementById('drawer-close-btn');
+      const navItems = document.querySelectorAll('.drawer-nav-item');
+      const scrollDownBtn = document.querySelector('[data-js="scroll-down"]');
+
+      function openMenu() {{
+        drawer.classList.add('open');
+        backdrop.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }}
+
+      function closeMenu() {{
+        drawer.classList.remove('open');
+        backdrop.classList.remove('active');
+        document.body.style.overflow = '';
+      }}
+
+      if (toggleBtn) toggleBtn.addEventListener('click', openMenu);
+      if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+      if (backdrop) backdrop.addEventListener('click', closeMenu);
+
+      document.addEventListener('keydown', function(e) {{
+        if (e.key === 'Escape' && drawer.classList.contains('open')) {{
+          closeMenu();
+        }}
+      }});
+
+      // Tap on scroll-down chevron to start
+      if (scrollDownBtn) {{
+        scrollDownBtn.style.cursor = 'pointer';
+        scrollDownBtn.style.pointerEvents = 'auto';
+        scrollDownBtn.addEventListener('click', function() {{
+          window.dispatchEvent(new CustomEvent("my:gesture:next"));
+        }});
+      }}
+
+      // Smooth navigation from drawer
+      navItems.forEach(item => {{
+        item.addEventListener('click', function(e) {{
+          e.preventDefault();
+          const targetId = this.getAttribute('data-target');
+          closeMenu();
+
+          // If at intro greeting, dismiss it
+          window.dispatchEvent(new CustomEvent("my:gesture:next"));
+
+          if (targetId === 'hero') {{
+            window.scrollTo({{ top: 0, behavior: 'smooth' }});
+            return;
+          }}
+
+          const targetEl = document.getElementById(targetId);
+          if (targetEl) {{
+            setTimeout(() => {{
+              const rect = targetEl.getBoundingClientRect();
+              const offsetTop = window.pageYOffset + rect.top;
+              window.scrollTo({{ top: offsetTop, behavior: 'smooth' }});
+            }}, 220);
+          }}
+        }});
+      }});
+    }})();
+  </script>
 
   <!-- Three.js Interactive Room Script with cache-buster -->
   <script type="module" src="./_resources/Wrapper.astro_astro_type_script_index_0_lang.CWKz2Y_a.js?v={cache_bust}"></script>
